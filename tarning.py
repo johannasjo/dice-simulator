@@ -71,8 +71,6 @@ def play_dice(amount_of_die):
             total_sum += value_of_dice 
             print("Du kastade: " + str(value_of_dice))
 
-        print (throw_number)
-        print (amount_of_die)
         print_line() 
         print("Summan av kastade tärningar är: " + str(total_sum))
         print_line() 
@@ -83,13 +81,40 @@ def play_dice(amount_of_die):
 
 #Spelaren får alternativ att börja om eller avsluta programmet.
 
+def ask_continue():
+    while True:
+        answer = input("Vill du spela igen? (j/n): ")
+        if answer == 'j':
+            return True
+        elif answer == 'n':
+            return False
+
 def main():
     introduction()
-    #amount_of_die = choose_amount_of_die()
+    while True:
     
-    amount_of_throws, total_sum = play_dice(2)
-    print("Det totala antalet tärningsslag blev: " + str(amount_of_throws))
-    print("Totalsumman för denna spelomgång blev: " + str(total_sum)) 
+
+        amount_of_die = choose_amount_of_die()
+        amount_of_throws, total_sum = play_dice(amount_of_die)
+        print("Det totala antalet tärningsslag blev: " + str(amount_of_throws))
+        print("Totalsumman för denna spelomgång blev: " + str(total_sum)) 
+        print_line()
+            
+        answer = ask_continue()
+        if not answer:
+            break
+
+
+
+    
+            
+          
+    print("Tack för den här spelomgången! Kom gärna tillbaka imorgon!")
+     
+         
+
+
+    
 
 
 if __name__ == "__main__":

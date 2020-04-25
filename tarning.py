@@ -74,9 +74,11 @@ def play_dice(amount_of_die):
         print (throw_number)
         print (amount_of_die)
         print_line() 
-        print("Den totala summan av kastade tärningar är: " + str(total_sum)) 
-
-
+        print("Summan av kastade tärningar är: " + str(total_sum))
+        print_line() 
+    #När alla tärningar är slagna skrivs totalsumman samt antal tärningsslag ut på skärmen.
+    print("Det totala antalet tärningsslag blev: " + str(throw_number))
+    print("Totalsumman för denna spelomgång blev: " + str(total_sum)) 
 
 
 

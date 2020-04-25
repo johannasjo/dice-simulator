@@ -76,18 +76,20 @@ def play_dice(amount_of_die):
         print_line() 
         print("Summan av kastade tärningar är: " + str(total_sum))
         print_line() 
+    return throw_number, total_sum
     #När alla tärningar är slagna skrivs totalsumman samt antal tärningsslag ut på skärmen.
-    print("Det totala antalet tärningsslag blev: " + str(throw_number))
-    print("Totalsumman för denna spelomgång blev: " + str(total_sum)) 
+  
 
 
-
+#Spelaren får alternativ att börja om eller avsluta programmet.
 
 def main():
     introduction()
     #amount_of_die = choose_amount_of_die()
-    print (play_dice(2))
-  
+    
+    amount_of_throws, total_sum = play_dice(2)
+    print("Det totala antalet tärningsslag blev: " + str(amount_of_throws))
+    print("Totalsumman för denna spelomgång blev: " + str(total_sum)) 
 
 
 if __name__ == "__main__":
